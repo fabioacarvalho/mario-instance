@@ -37,17 +37,17 @@ const loop = setInterval(() => {
         if(score > 0) {
             cloud.src = 'image/cloud.png'
         }
-        if(score > 500) {
+        if(score > 1000) {
             score_set.style.color = "white"
             game_board.style.background = 'linear-gradient(#1d2e35, #b1c2c9)'
         }
-        if(score > 850) {
+        if(score > 2000) {
             score_set.style.color = "white"
             game_board.style.background = 'linear-gradient(#1d2e35, #484f52)'
             boo.style.display = "block"
             turtle.style.display = "none"
         }
-        if(score >= 1500) {
+        if(score >= 2850) {
             mario.src = 'image/mario-yoshi.gif'
         }
     }
