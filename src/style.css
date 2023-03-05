@@ -1,0 +1,114 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4d4d4d;
+}
+
+#game-board {
+    width: 80%;
+    height: 500px;
+    border:  1px solid #000;
+    border-bottom:  10px solid #457647;
+    margin: auto;
+    position: relative;
+    overflow: hidden; /* When something go out the game board */
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px #00000057;
+}
+
+/* Set pipe */
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: 0px;
+    animation: pipe_instance 1.5s infinite linear;
+}
+
+/* Set mario */
+.mario {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    left: 0px;
+}
+
+.mario_jump {
+    animation: mario_jump 500ms;
+}
+
+.cloud {
+    position: absolute;
+    bottom: 380px;
+    width: 80px;
+    right: 0px;
+    animation: pipe_instance 2s infinite linear;
+}
+
+.turtle {
+    position: absolute;
+    bottom: 180;
+    width: 80px;
+    right: 0px;
+    animation: turtle_instance 2.5s infinite linear;
+}
+
+.gm {
+    width: 90%;
+    margin: 5%;
+}
+
+#restart {
+    display: none;
+    position: fixed;
+    right: 45%;
+    top: 20%;
+}
+
+/* Animations */
+
+@keyframes pipe_instance {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes turtle_instance {
+    from {
+        left: -80px;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes mario_jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
