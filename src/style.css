@@ -49,7 +49,7 @@ body {
     bottom: 380px;
     width: 80px;
     right: 0px;
-    animation: pipe_instance 2s infinite linear;
+    animation: cloud_instance 2s infinite linear;
 }
 
 .turtle {
@@ -58,6 +58,13 @@ body {
     width: 80px;
     right: 0px;
     animation: turtle_instance 2.5s infinite linear;
+}
+.boo {
+    position: absolute;
+    bottom: 180;
+    width: 80px;
+    right: 0px;
+    animation: boo_instance 2.5s infinite linear;
 }
 
 .gm {
@@ -92,6 +99,15 @@ body {
         right: 100%;
     }
 }
+@keyframes cloud_instance {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
 
 @keyframes turtle_instance {
     from {
@@ -100,6 +116,15 @@ body {
 
     to {
         left: 100%;
+    }
+}
+@keyframes boo_instance {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
     }
 }
 
@@ -146,7 +171,6 @@ body {
         0% {
             bottom: 0;
         }
-    
         30% {
             bottom: 180px;
         }

@@ -2,9 +2,12 @@
 
 const pipe = document.querySelector(".pipe")
 const mario = document.querySelector(".mario")
+const boo = document.querySelector(".boo")
+const turtle = document.querySelector(".turtle")
 const restart = document.querySelector("#restart")
 const game_board = document.querySelector("#game-board")
 const score_set = document.querySelector(".score")
+const cloud = document.querySelector(".cloud")
 const start = document.querySelector("#start")
 
 var score = 0
@@ -29,6 +32,24 @@ const loop = setInterval(() => {
         score += 1
         console.log(score)
         score_set.innerHTML = `<span style="margin-left:10px"> <strong> SCORE: </strong> ${score}</span>`
+
+       
+        if(score > 0) {
+            cloud.src = 'image/cloud.png'
+        }
+        if(score > 500) {
+            score_set.style.color = "white"
+            game_board.style.background = 'linear-gradient(#1d2e35, #b1c2c9)'
+        }
+        if(score > 850) {
+            score_set.style.color = "white"
+            game_board.style.background = 'linear-gradient(#1d2e35, #484f52)'
+            boo.style.display = "block"
+            turtle.style.display = "none"
+        }
+        if(score >= 1500) {
+            mario.src = 'image/mario-yoshi.gif'
+        }
     }
 
     if(pipe_position <= 75 && pipe_position > 0 && mario_position < 75) {
