@@ -165,7 +165,7 @@ body {
 
 @media (min-width: 414px) {
     .mario_jump {
-        animation: mario_jump 700ms;
+        animation: mario_jump 800ms;
     }
     @keyframes mario_jump {
         0% {
